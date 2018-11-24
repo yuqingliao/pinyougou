@@ -5,6 +5,7 @@ import com.pinyougou.pojo.TbBrand;
 import com.pinyougou.sellergoods.service.BrandService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,5 +23,12 @@ public class BrandController {
     public List<TbBrand>findAll(){
         return brandService.queryAll();
     }
+
+    @GetMapping("/testPage")
+    public List<TbBrand>testPage(Integer page, Integer rows){
+
+        return brandService.testPage(page,rows);
+    }
+
 
 }

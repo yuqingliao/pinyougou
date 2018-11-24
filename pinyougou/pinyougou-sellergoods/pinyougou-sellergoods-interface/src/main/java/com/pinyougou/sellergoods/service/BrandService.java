@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface BrandService {
     public List<TbBrand>queryAll();
+
+    List<TbBrand> testPage(Integer page, Integer rows);
 }
