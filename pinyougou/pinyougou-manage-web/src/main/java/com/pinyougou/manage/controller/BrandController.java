@@ -8,6 +8,7 @@ import com.pinyougou.vo.Result;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Date:2018/11/23
@@ -32,7 +33,14 @@ public class BrandController {
 
         return brandService.findPage(page,rows);
     }
-
+    /**
+     * 查询品牌列表，返回的数据格式符合 select2 格式
+     * @return
+     */
+    @GetMapping("/selectOptionList")
+    public List<Map<String, Object>> selectOptionList() {
+        return brandService.selectOptionList();
+    }
     @PostMapping("/add")
     public Result add(@RequestBody TbBrand brand){
         try {
