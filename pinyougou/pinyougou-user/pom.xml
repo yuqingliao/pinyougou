@@ -9,12 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-<artifactId>pinyougou-sellergoods</artifactId>
-<packaging>pom</packaging>
-<modules>
-<module>pinyougou-sellergoods-interface</module>
-<module>pinyougou-sellergoods-service</module>
-</modules>
+    <groupId>com.pinyougou</groupId>
+    <artifactId>pinyougou-user</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>pinyougou-user-interface</module>
+        <module>pinyougou-user-service</module>
+    </modules>
 
 
-        </project>
+</project>
